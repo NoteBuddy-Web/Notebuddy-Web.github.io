@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { font-family: "Liberation Mono", monospace; font-size: 10pt; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Notebuddy - AI Productivity Assistant&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css&quot;&gt;
+    &lt;style&gt;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --dark-bg: #0f172a;
+            --text-primary: #f8fafc;
+            --accent: #818cf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            padding: 1.5rem 5%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, var(--dark-bg) 100%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: #1e293b;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Waitlist Section */
+        .waitlist {
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .email-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 1.25rem;
+            border-radius: 50px;
+            border: none;
+            background: #1e293b;
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin: 2rem 0;
+            outline: none;
+        }
+
+        .email-input:focus {
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 5%;
+            text-align: center;
+            background: #1e293b;
+            margin-top: 4rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility Classes */
+        .gradient-btn {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gradient-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Navigation --&gt;
+    &lt;nav class=&quot;nav&quot;&gt;
+        &lt;div class=&quot;nav-content&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;Notebuddy&lt;/div&gt;
+            &lt;div class=&quot;nav-links&quot;&gt;
+                &lt;a href=&quot;#about&quot; class=&quot;nav-link&quot;&gt;About&lt;/a&gt;
+                &lt;a href=&quot;#features&quot; class=&quot;nav-link&quot;&gt;Features&lt;/a&gt;
+                &lt;a href=&quot;#waitlist&quot; class=&quot;gradient-btn&quot;&gt;Join Waitlist&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Hero Section --&gt;
+    &lt;section class=&quot;hero&quot;&gt;
+        &lt;div class=&quot;hero-content&quot;&gt;
+            &lt;h1&gt;Your AI-Powered Productivity Revolution&lt;/h1&gt;
+            &lt;p&gt;Transform the way you work with intelligent task management and real-time collaboration&lt;/p&gt;
+            &lt;a href=&quot;#waitlist&quot; class=&quot;gradient-btn&quot;&gt;Join the Waitlist&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- About Section --&gt;
+    &lt;section class=&quot;about&quot; id=&quot;about&quot;&gt;
+        &lt;div class=&quot;about-grid&quot;&gt;
+            &lt;div&gt;
+                &lt;h2 class=&quot;section-title&quot;&gt;Smart Work Management&lt;/h2&gt;
+                &lt;p&gt;Notebuddy combines artificial intelligence with intuitive design to help professionals manage meetings, tasks, and schedules with unprecedented efficiency.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;about-image&quot;&gt;
+                &lt;!-- Add image/illustration here --&gt;
+                &lt;div style=&quot;height: 400px; background: #2d3748; border-radius: 0.5rem;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Features Section --&gt;
+    &lt;section class=&quot;features&quot; id=&quot;features&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Key Features&lt;/h2&gt;
+        &lt;div class=&quot;features-grid&quot;&gt;
+            &lt;div class=&quot;feature-card&quot;&gt;
+                &lt;i class=&quot;fas fa-brain feature-icon&quot;&gt;&lt;/i&gt;
+                &lt;h3&gt;AI-Powered Scheduling&lt;/h3&gt;
+                &lt;p&gt;Smart calendar management that learns your preferences and optimizes your time&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;!-- Add more feature cards --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Waitlist Section --&gt;
+    &lt;section class=&quot;waitlist&quot; id=&quot;waitlist&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Get Early Access&lt;/h2&gt;
+        &lt;input type=&quot;email&quot; class=&quot;email-input&quot; placeholder=&quot;Enter your email for early access&quot;&gt;
+        &lt;button class=&quot;gradient-btn&quot;&gt;Get Early Access&lt;/button&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class=&quot;footer&quot;&gt;
+        &lt;div class=&quot;social-icons&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;social-icon&quot;&gt;&lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;social-icon&quot;&gt;&lt;i class=&quot;fab fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;social-icon&quot;&gt;&lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&amp;copy; 2023 Notebuddy. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;script&gt;
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^=&quot;#&quot;]').forEach(anchor =&gt; {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
